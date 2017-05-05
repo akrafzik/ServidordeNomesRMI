@@ -1,8 +1,8 @@
-package trabalhoRMI.Requisições;
+package trabalhoRMI.Requisicoes;
 
 import java.io.Serializable;
 
-public class servMaiorReq implements Serializable{
+public class servMenorReq implements Serializable{
     float[] numeros = new float[10];
 
     public float[] getNumeros() {
@@ -12,5 +12,4 @@ public class servMaiorReq implements Serializable{
     public void setNumeros(float[] numeros) {
         this.numeros = numeros;
     }
-  
 }

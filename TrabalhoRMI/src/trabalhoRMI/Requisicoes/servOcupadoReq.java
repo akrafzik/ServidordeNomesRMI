@@ -1,4 +1,4 @@
-package trabalhoRMI.Requisições;
+package trabalhoRMI.Requisicoes;
 
 import java.io.Serializable;
 
