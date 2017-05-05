@@ -4,9 +4,10 @@ import java.rmi.*;
 import trabalhoRMI.Respostas.servPrimoResp;
 import trabalhoRMI.Requisicoes.servPrimoReq;
 
-public interface servidorPrimos extends Remote{
+public interface servidorPrimo extends Remote{
     
-    	public servPrimoResp primos(servPrimoReq servprimoreq) throws RemoteException;
+    	public servPrimoResp primo(servPrimoReq servprimoreq) 
+            throws RemoteException;
 
     
 }
