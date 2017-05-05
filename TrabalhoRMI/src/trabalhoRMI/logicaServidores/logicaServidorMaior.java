@@ -16,7 +16,19 @@ public class logicaServidorMaior extends UnicastRemoteObject implements servidor
             throws RemoteException {
         
         servMaiorResp resposta = new servMaiorResp();
-        
+        float[] numeros = new float[10];
+          numeros = servmaiorreq.getNumeros();
+          resposta.setResultado(0);
+        for (int i = 0; i < 10; i++) {
+          if(numeros[i]>resposta.getResultado()){
+            resposta.setResultado(numeros[i]);
+            }
+        }
+        if (resposta.getResultado()!=0){
+        resposta.setStatus(0);
+        } else {
+            resposta.setStatus(1);
+        }
         return resposta;
     }
             

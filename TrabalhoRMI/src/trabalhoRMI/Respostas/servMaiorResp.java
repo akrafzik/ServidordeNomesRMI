@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class servMaiorResp implements Serializable{
     int status;
-    int resultado;
+    float resultado;
 
     public int getStatus() {
         return status;
@@ -14,11 +14,11 @@ public class servMaiorResp implements Serializable{
         this.status = status;
     }
 
-    public int getResultado() {
+    public float getResultado() {
         return resultado;
     }
 
-    public void setResultado(int resultado) {
+    public void setResultado(float resultado) {
         this.resultado = resultado;
     }
 }

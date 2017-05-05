@@ -16,6 +16,29 @@ public class logicaServidorPrimo extends UnicastRemoteObject implements servidor
         
         servPrimoResp resposta = new servPrimoResp();
         
+        int[] numeros = servprimoreq.getNumeros();
+        resposta.setResultado(0);
+        
+        for (int i = 0; i < 10; i++) {
+            int numero = numeros[i];
+            int cont = 0;
+            for (int j = 1; j <= numero; j++) {
+                if(numero%j==0){
+                    cont = cont+1;
+                }
+            }
+            if (cont == 2){
+                resposta.setResultado(resposta.getResultado()+1);
+            }
+            
+        }
+        if(resposta.getResultado()==0){
+            resposta.setStatus(1);
+        } else {
+            resposta.setStatus(0);
+        }
+        
+        
         return resposta;
     }
 }
